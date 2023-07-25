@@ -4,8 +4,8 @@ export default {
   theme: {
     colors: {
       dark: "hsl(230, 35%, 7%)",
-      white: "hsl(231, 77%, 90%)",
-      "light-blue": "hsl(0, 0%, 100%)",
+      "light-blue": "hsl(231, 77%, 90%)",
+      white: "hsl(0, 0%, 100%)",
     },
     fontFamily: {
       sans: "Barlow",
@@ -27,7 +27,16 @@ export default {
       wider: "2.7px",
       widest: "4.75px",
     },
-    extend: {},
+    extend: {
+      screens: {
+        desktop: "1440px",
+      },
+      backgroundImage: {
+        "home-mobile": "url('./assets/home/background-home-mobile.jpg')",
+        "home-tablet": "url('./assets/home/background-home-tablet.jpg')",
+        "home-desktop": "url('./assets/home/background-home-desktop.jpg')",
+      },
+    },
   },
   plugins: [],
 };
