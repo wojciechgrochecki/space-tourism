@@ -1,11 +1,10 @@
 import "./App.css";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <div>
-      <h1 className="font-sans text-900">Hello world!</h1>
-      <h1 className="font-sans-cond text-800">Hello world!</h1>
-      <h1 className="font-sans text-400">Hello world!</h1>
+      <HomePage />
     </div>
   );
 }
