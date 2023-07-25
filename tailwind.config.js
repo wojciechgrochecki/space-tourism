@@ -29,7 +29,7 @@ export default {
     },
     extend: {
       screens: {
-        desktop: "1440px",
+        lg: "900px",
       },
       backgroundImage: {
         "home-mobile": "url('./assets/home/background-home-mobile.jpg')",
