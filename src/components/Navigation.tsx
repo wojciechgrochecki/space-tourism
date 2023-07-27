@@ -9,7 +9,7 @@ export default function Navigation({}) {
   return (
     <div
       className="flex flex-row items-center justify-between p-6 md:px-0
-    md:py-0 md:pl-14 lg:py-10"
+    md:py-0 md:pl-8 lg:py-10 lg:pl-14"
     >
       <img src={Logo} alt="website logo" className="" />
       <div className="relative right-[-30px] z-30 hidden h-[1px] flex-1 bg-white/30 lg:block"></div>

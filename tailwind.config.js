@@ -29,6 +29,7 @@ export default {
     },
     extend: {
       screens: {
+        md: "600px",
         lg: "900px",
       },
       backgroundImage: {
