@@ -23,7 +23,7 @@ export default {
       200: "var(--fs-200)",
     },
     letterSpacing: {
-      wide: "2.35",
+      wide: "2.35px",
       wider: "2.7px",
       widest: "4.75px",
     },
