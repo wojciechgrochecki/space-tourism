@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 design
+data.json
 style-guide.md
 node_modules
 dist
