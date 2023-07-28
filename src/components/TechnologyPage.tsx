@@ -9,7 +9,7 @@ export default function TechnologyPage({}) {
     >
       <Navigation />
       <div
-        className="grid content-start justify-items-center md:pt-10 
+        className="s grid content-start justify-items-center md:pt-10 
       lg:grid-cols-[minmax(2rem,2fr)_minmax(0,650px)_minmax(2rem,5rem)_minmax(0,500px)_minmax(2rem,2fr)] "
       >
         <h1 className="px-6 font-sans-cond text-500 uppercase tracking-wider text-white lg:tracking-widest">
