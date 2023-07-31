@@ -1,7 +1,12 @@
 import Navigation from "./Navigation";
 import DouglasHurleyImg from "../assets/crew/image-douglas-hurley.png";
+import data from "../../data.json";
+import { useState } from "react";
 
 export default function CrewPage({}) {
+  const [index, setIndex] = useState(0);
+  const { crew } = data;
+
   return (
     <div
       className="grid min-h-screen grid-rows-[min-content_1fr] overflow-x-hidden bg-dark bg-crew-mobile
@@ -19,33 +24,42 @@ export default function CrewPage({}) {
           Meet Your Crew
         </h2>
         <img
-          src={DouglasHurleyImg}
-          alt="moon image"
+          src={crew[index].images.png}
+          alt={"crew member " + crew[index].name + " photo"}
           className="mt-8 max-w-[60%] border-b border-b-white/30 md:order-3 md:self-end  md:border-b-0  lg:order-none lg:col-span-1 lg:col-start-4 
           lg:row-span-3  lg:mt-0 lg:w-auto lg:max-w-full "
         />
         <div className="md:order-2 lg:col-span-1 lg:col-start-2 lg:justify-self-start">
           <ul className="mt-6 flex flex-row gap-6 md:mt-10 lg:my-6 [&_li]:cursor-pointer">
-            <li className="rounded-full  bg-white p-[5px] md:p-2 lg:p-3"></li>
-            <li className="rounded-full bg-white/40 p-[5px] md:p-2 lg:p-3"></li>
-            <li className="rounded-full bg-white/40 p-[5px] md:p-2 lg:p-3"></li>
-            <li className="rounded-full bg-white/40 p-[5px] md:p-2 lg:p-3"></li>
+            {crew.map((member, i) => {
+              let style =
+                i === index
+                  ? "rounded-full  bg-white p-[5px] md:p-2 lg:p-3"
+                  : "rounded-full bg-white/20 p-[5px] hover:bg-white/50 md:p-2 lg:p-3";
+              return (
+                <li
+                  key={member.name}
+                  className={style}
+                  onClick={() => {
+                    if (i !== index) setIndex(i);
+                  }}
+                ></li>
+              );
+            })}
           </ul>
         </div>
         <div className="mt-6 text-center md:mt-14  lg:col-span-1 lg:col-start-2 lg:justify-self-start lg:text-left">
           <p className="font-serif text-600 uppercase  text-white/50">
-            Commander
+            {crew[index].role}
           </p>
           <h1 className="mt-2 font-serif text-700 uppercase text-white md:mt-0 ">
-            Douglas Hurley
+            {crew[index].name}
           </h1>
           <p
             className="mt-4 max-w-[51ch] pb-8 text-center font-sans text-400 leading-6 text-light-blue
            md:mt-0 md:pb-0 md:leading-7 lg:mt-4 lg:max-w-[45ch]  lg:text-left lg:leading-8 "
           >
-            Douglas Gerald Hurley is an American engineer, former Marine Corps
-            pilot and former NASA astronaut. He launched into space for the
-            third time as commander of Crew Dragon Demo-2.
+            {crew[index].bio}
           </p>
         </div>
       </div>
