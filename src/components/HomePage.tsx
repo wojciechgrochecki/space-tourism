@@ -1,4 +1,5 @@
 import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
 
 export default function HomePage({}) {
   return (
@@ -27,8 +28,8 @@ export default function HomePage({}) {
           </p>
         </div>
         <div className="max-w-[450px] lg:col-start-4 ">
-          <a
-            href="#"
+          <Link
+            to="/destination"
             className="relative z-10 grid aspect-square place-items-center rounded-full bg-white px-8 font-serif text-[20px]
             uppercase tracking-[1.25px] text-dark  after:absolute after:-z-10 
             after:block after:h-full after:w-full after:rounded-full after:bg-white/10 after:opacity-0
@@ -37,7 +38,7 @@ export default function HomePage({}) {
             "
           >
             Explore
-          </a>
+          </Link>
         </div>
       </div>
     </div>
