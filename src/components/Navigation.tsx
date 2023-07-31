@@ -31,7 +31,7 @@ export default function Navigation({}) {
               to="/"
               className={({ isActive }) => `
                 ${isActive && "!border-b-white"}
-                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/40 md:py-8`}
+                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/50 md:py-8`}
             >
               <span className="mr-[11px] inline-block font-bold md:hidden lg:inline-block">
                 00
@@ -44,7 +44,7 @@ export default function Navigation({}) {
               to="/destination"
               className={({ isActive }) => `
                 ${isActive && "!border-b-white"}
-                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/40 md:py-8`}
+                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/50 md:py-8`}
             >
               <span className="mr-[11px] inline-block font-bold md:hidden lg:inline-block">
                 01
@@ -57,7 +57,7 @@ export default function Navigation({}) {
               to="/crew"
               className={({ isActive }) => `
                 ${isActive && "!border-b-white"}
-                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/40 md:py-8`}
+                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/50 md:py-8`}
             >
               <span className="mr-[11px] inline-block font-bold md:hidden lg:inline-block">
                 02
@@ -70,7 +70,7 @@ export default function Navigation({}) {
               to="/technology"
               className={({ isActive }) => `
                 ${isActive && "!border-b-white"}
-                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/40 md:py-8`}
+                   block h-full border-b-[3px] border-b-white/0 hover:border-b-white/50 md:py-8`}
             >
               <span className="mr-[11px] inline-block font-bold md:hidden lg:inline-block">
                 03
