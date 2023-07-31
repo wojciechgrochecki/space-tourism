@@ -1,8 +1,11 @@
 import Navigation from "./Navigation";
-import LaunchLandscape from "../assets/technology/image-launch-vehicle-landscape-fixed.jpg";
-import LaunchPortrait from "../assets/technology/image-launch-vehicle-portrait.jpg";
+import data from "../../data.json";
+import { useState } from "react";
 
 export default function TechnologyPage({}) {
+  const [index, setIndex] = useState(0);
+  const { technology } = data;
+
   return (
     <div
       className="grid  min-h-screen grid-rows-[min-content_1fr] overflow-x-hidden bg-dark bg-technology-mobile
@@ -20,9 +23,12 @@ export default function TechnologyPage({}) {
           Space launch 101
         </h1>
         <picture className="lg: w-full lg:col-span-2 lg:col-start-4 lg:row-start-2 lg:place-self-end lg:self-center">
-          <source media="(min-width:900px)" srcSet={LaunchPortrait} />
+          <source
+            media="(min-width:900px)"
+            srcSet={technology[index].images.portrait}
+          />
           <img
-            src={LaunchLandscape}
+            src={technology[index].images.landscape}
             alt="space rocket image"
             className="mt-8 h-auto w-full lg:ml-auto lg:mt-0 lg:w-auto "
           />
@@ -30,15 +36,23 @@ export default function TechnologyPage({}) {
         <div className="contents w-full lg:col-start-2 lg:grid lg:grid-cols-[min-content_clamp(1rem,5vw,5rem)_1fr] lg:self-center  ">
           <div className="lg:self mt-8 px-6  lg:mt-6 lg:px-0 ">
             <ul className="flex flex-row gap-4 text-center font-serif lg:flex-col lg:gap-8 [&_li]:hover:cursor-pointer ">
-              <li className="flex aspect-square w-10 items-center justify-center rounded-full bg-white text-600 text-dark md:w-[60px] lg:w-20">
-                1
-              </li>
-              <li className="flex aspect-square w-10 items-center justify-center rounded-full border border-white/30 text-600 text-white md:w-[60px] lg:w-20">
-                2
-              </li>
-              <li className="flex aspect-square w-10 items-center justify-center rounded-full border border-white/30 text-600 text-white md:w-[60px] lg:w-20">
-                3
-              </li>
+              {technology.map((tech, i) => {
+                let style =
+                  i === index
+                    ? "flex aspect-square w-10 items-center justify-center rounded-full bg-white text-600 text-dark md:w-[60px] lg:w-20"
+                    : "flex aspect-square w-10 items-center justify-center rounded-full border border-white/25 text-600 text-white md:w-[60px] lg:w-20 hover:border-white";
+                return (
+                  <li
+                    key={tech.name}
+                    className={style}
+                    onClick={() => {
+                      if (i !== index) setIndex(i);
+                    }}
+                  >
+                    {i + 1}
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="mt-6 px-6 text-center lg:col-start-3 lg:px-0 lg:text-left ">
@@ -46,17 +60,13 @@ export default function TechnologyPage({}) {
               The terminology...
             </p>
             <h2 className="font-serif text-700 uppercase text-white lg:mt-3 lg:leading-none ">
-              Launch vehicle
+              {technology[index].name}
             </h2>
             <p
               className="mt-4 max-w-[51ch] pb-8 text-center font-sans text-400 leading-6 text-light-blue md:mt-0
              md:max-w-[70ch] md:pb-0 md:leading-7 lg:mt-4 lg:max-w-[45ch]  lg:text-left lg:leading-8"
             >
-              A launch vehicle or carrier rocket is a rocket-propelled vehicle
-              used to carry a payload from Earth's surface to space, usually to
-              Earth orbit or beyond. Our WEB-X carrier rocket is the most
-              powerful in operation. Standing 150 metres tall, it's quite an
-              awe-inspiring sight on the launch pad!
+              {technology[index].description}
             </p>
           </div>
         </div>
