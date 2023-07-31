@@ -1,5 +1,4 @@
 import Navigation from "./Navigation";
-import MoonImg from "../assets/destination/image-moon.png";
 import data from "../../data.json";
 import { useState } from "react";
 

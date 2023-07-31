@@ -1,5 +1,4 @@
 import Navigation from "./Navigation";
-import DouglasHurleyImg from "../assets/crew/image-douglas-hurley.png";
 import data from "../../data.json";
 import { useState } from "react";
 
