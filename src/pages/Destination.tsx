@@ -1,4 +1,4 @@
-import Navigation from "./Navigation";
+import Navigation from "../components/Navigation";
 import data from "../../data.json";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ export default function DestinationPage({}) {
     bg-cover  bg-no-repeat md:bg-destination-tablet lg:bg-destination-desktop "
     >
       <Navigation />
-      <div className="grid content-start justify-items-center px-6 md:pt-6 lg:grid-cols-[minmax(2rem,2fr)_minmax(0,500px)_minmax(2rem,5rem)_minmax(0,500px)_minmax(2rem,2fr)] ">
+      <div className="grid content-start justify-items-center px-6 md:pt-10 lg:grid-cols-[minmax(2rem,2fr)_minmax(0,500px)_minmax(2rem,5rem)_minmax(0,500px)_minmax(2rem,2fr)] ">
         <h2 className="font-sans-cond text-500 uppercase tracking-wider text-white md:justify-self-start  lg:col-span-2 lg:col-start-2 lg:tracking-widest">
           <span className="mr-[18px] inline-block font-bold text-white/30">
             01

@@ -1,4 +1,4 @@
-import Navigation from "./Navigation";
+import Navigation from "../components/Navigation";
 import data from "../../data.json";
 import { useState } from "react";
 
