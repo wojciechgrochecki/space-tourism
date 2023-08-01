@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation";
 import { Link } from "react-router-dom";
 
-export default function HomePage({}) {
+export default function Home({}) {
   return (
     <div
       className="grid min-h-screen grid-rows-[min-content_1fr] overflow-x-hidden bg-dark bg-home-mobile

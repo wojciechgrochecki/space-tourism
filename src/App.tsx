@@ -1,26 +1,26 @@
 import "./App.css";
-import CrewPage from "./components/CrewPage";
-import DestinationPage from "./components/DestinationPage";
-import HomePage from "./components/HomePage";
-import TechnologyPage from "./components/TechnologyPage";
+import Crew from "./pages/Crew";
+import Destination from "./pages/Destination";
+import Home from "./pages/Home";
+import Technology from "./pages/Technology";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
+    index: true,
+    element: <Home />,
   },
   {
     path: "/crew",
-    element: <CrewPage />,
+    element: <Crew />,
   },
   {
     path: "/destination",
-    element: <DestinationPage />,
+    element: <Destination />,
   },
   {
     path: "/technology",
-    element: <TechnologyPage />,
+    element: <Technology />,
   },
 ]);
 

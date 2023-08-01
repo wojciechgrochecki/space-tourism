@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 import data from "../../data.json";
 import { useState } from "react";
 
-export default function TechnologyPage({}) {
+export default function Technology({}) {
   const [index, setIndex] = useState(0);
   const { technology } = data;
 

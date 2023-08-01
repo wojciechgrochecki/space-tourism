@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 import data from "../../data.json";
 import { useState } from "react";
 
-export default function DestinationPage({}) {
+export default function Destination({}) {
   const [index, setIndex] = useState(0);
   const { destinations } = data;
 

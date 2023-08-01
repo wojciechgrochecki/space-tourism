@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 import data from "../../data.json";
 import { useState } from "react";
 
-export default function CrewPage({}) {
+export default function Crew({}) {
   const [index, setIndex] = useState(0);
   const { crew } = data;
 
